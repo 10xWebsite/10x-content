@@ -1,0 +1,29 @@
+{
+  "name": "10x-content",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node runIndex.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/10xWebsite/10x-content.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/10xWebsite/10x-content/issues"
+  },
+  "homepage": "https://github.com/10xWebsite/10x-content#readme",
+  "dependencies": {
+    "fs-extra": "^9.0.1",
+    "remark": "^12.0.1",
+    "remark-autolink-headings": "^6.0.1",
+    "remark-extract-toc": "^0.1.1",
+    "remark-parse": "^8.0.3",
+    "remark-slug": "^6.0.0",
+    "yaml": "^1.10.0"
+  }
+}

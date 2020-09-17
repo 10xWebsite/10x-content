@@ -15,7 +15,7 @@ jobs:
       - name: Run Index
         run: |
           npm ci
-          npm run index
+          npm run build
       - name: Deploy to GH Pages
         uses: JamesIves/github-pages-deploy-action@3.5.7
         with:

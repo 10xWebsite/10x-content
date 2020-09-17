@@ -22,4 +22,3 @@ jobs:
           GITHUB_TOKEN: ${{ github.token }}
           BRANCH: gh-pages
           FOLDER: build
-          TARGET_FOLDER: ${{ env.TARGET_FOLDER }}

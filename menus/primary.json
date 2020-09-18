@@ -22,6 +22,7 @@
       "text": "The 10x process",
       "link": "the-10x-process",
       "img": "images/process.svg",
+      "Description": "What happens if your idea is selected?",
       "desc": "What happens if your idea is selected?"
     },
     {
@@ -31,5 +32,5 @@
       "desc": "A list of 10x projects past and present."
     }
   ],
-  "key": "primary",
+  "key": "primary"
 }

@@ -1,11 +1,10 @@
 backend:
   name: github
   repo: 10xWebsite/10x-content
-  branch: master
+  branch: main
 
 media_folder: images
 public_folder: images
-publish_mode: editorial_workflow
 
 collections:
   - name: settings
@@ -55,9 +54,10 @@ collections:
     delete: true
     editor:
       preview: false
+    slug: "{{key}}"
     fields:
-      - name: name
-        label: Name
+      - name: key
+        label: key
         widget: string
       - name: items
         label: Items
@@ -69,6 +69,12 @@ collections:
           - label: Link
             name: link
             widget: string
+          - label: Description
+            name: desc
+            width: string
+          - label: img
+            name: img
+            widget: image
           - label: Items
             name: items
             widget: list
@@ -86,9 +92,70 @@ collections:
     folder: content/page
     create: true
     delete: true
+    slug: "{{title}}"
     preview_path: "{{slug}}"
-    editor:
-      preview: false
+    identifier_field: title
     fields:
       - { label: "Title", name: "title", widget: "string" }
+      - {
+          label: "Hero Content",
+          name: "hero",
+          widget: "markdown",
+          required: false,
+        }
       - { label: "Body", name: "body", widget: "markdown" }
+  - name: project
+    extension: json
+    label: Projects
+    label_singular: Project
+    folder: content/project
+    create: true
+    delete: true
+    slug: "{{title}}"
+    preview_path: "{{slug}}"
+    identifier_field: title
+    fields:
+      - label: "Project Title"
+        name: "title"
+        widget: "string"
+      - label: "Headline"
+        name: "subtitle"
+        widget: "string"
+      - label: "Type"
+        name: "type"
+        widget: "select"
+        options: ["Innovative", "Transformational", "Incremental"]
+      - label: "Excerpt"
+        name: "excerpt"
+        widget: "text"
+      - label: "Phase"
+        name: "phaseData"
+        widget: "object"
+        collapsed: true
+        fields:
+          - label: "Phase"
+            name: "phase"
+            widget: "select"
+            options: ["1", "2", "3", "4"]
+          - label: "Status"
+            name: "status"
+            widget: "select"
+            options:
+              [
+                { label: "In Progress", value: "1" },
+                { label: "Done", value: "2" },
+                { label: "Graduated", value: "3" },
+              ]
+            default: "InProgress"
+          - label: "Message"
+            name: "message"
+            hint: "Override the default Phase status message."
+            widget: "string"
+            required: false
+      - label: "Topics"
+        name: "topics"
+        widget: "string"
+        hint: "Separate tag values by comma."
+      - label: "Body"
+        name: "body"
+        widget: "markdown"

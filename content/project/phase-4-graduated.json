@@ -11,6 +11,28 @@
   "projectLink": "https://github.com",
   "subtitle": "Making privacy management more efficient",
   "title": "Phase 4 Graduated",
+  "links": [
+    {
+      "text": "GitHub README",
+      "link": "https://github.com"
+    },
+    {
+      "text": "The U.S. Data Federation wants to make it easier to collect, combine, and exchange data across government",
+      "link": "/"
+    },
+    {
+      "text": "Phase 4 Closeout Deck",
+      "link": "/"
+    },
+    {
+      "text": "Resources.data.gov",
+      "link": "https://resources.data.gov"
+    },
+    {
+      "text": "Trello task board",
+      "link": "/"
+    }
+  ],
   "type": "Incremental",
   "team": {
     "members": "Chris Goranson, Catherine Devlin, Tony Garvan, Joe Krzystan, Mark Headd, Amy Mok, Julia Lindpaintner, Ethan Heppner, Mike Gintz, Julia Lindpaintner, Mike Gintz, Princess Ojiaku, James Tranovich\n\n",

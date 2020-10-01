@@ -63,8 +63,8 @@ const addContentMetaData = (filename, filePath, collection) => {
   }${fileData.name}`;
 
   const process = remark.processSync(fileData.body);
-
-  fileData.excerpt = process.data.excerpt;
+  if(!fileData.excerpt) {
+  fileData.excerpt = process.data.excerpt;}
   fileData.body = process.toString();
 
   const node = remarkToc.parse(fileData.body);
